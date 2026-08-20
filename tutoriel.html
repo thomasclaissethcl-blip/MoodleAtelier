@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tutoriel par phases pour créer, animer et fermer une activité Atelier dans Moodle 5.">
+  <title>Configurer et piloter — Atelier Moodle 5</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="top-strip"><div class="container"><p class="context-label">Enseignement supérieur · prise en main débutante</p><nav class="utility-links" aria-label="Liens utiles"><a href="glossaire.html">Glossaire</a><a href="ressources.html">Sources</a><span>Moodle 5.x</span></nav></div></div>
+    <nav class="site-nav container" aria-label="Navigation principale">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>Atelier Moodle 5<br><span class="brand-subtitle muted small">Guide pratique</span></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-controls="navigation" aria-expanded="false">Menu</button>
+      <ul class="nav-links" id="navigation" data-nav-links>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="pedagogie.html">Choisir &amp; concevoir</a></li>
+        <li><a href="#phase-1" aria-current="page">Configurer</a></li>
+        <li><a href="#phase-2">Piloter</a></li>
+        <li><a href="bonnes-pratiques.html">Sécuriser</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <header class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Tutoriel · cinq phases Moodle</p>
+        <h1>Configurer et conduire un Atelier simple</h1>
+        <p class="lead">Suivez la phase active dans Moodle. Chaque partie indique l’objectif pédagogique, l’action de l’enseignant, l’expérience de l’étudiant et la condition à vérifier avant de continuer.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#phase-1">Configurer l’activité</a><a class="btn btn-secondary" href="#phase-2">Reprendre un Atelier en cours</a><button class="btn btn-secondary" type="button" data-print>Imprimer</button></div>
+      </div>
+    </header>
+
+    <section class="section" id="scenario">
+      <div class="container">
+        <div class="scenario-box">
+          <p class="eyebrow">Scénario fil rouge</p>
+          <h2>Note d’analyse argumentée</h2>
+          <p>Chaque étudiant rédige une note de 500 mots, évalue trois travaux avec trois critères, puis transforme les retours reçus en plan d’amélioration.</p>
+          <div class="scenario-facts">
+            <div><span>Finalité</span><strong>Formative</strong></div>
+            <div><span>Production</span><strong>500 mots, PDF</strong></div>
+            <div><span>Évaluations</span><strong>3 par étudiant</strong></div>
+            <div><span>Calendrier</span><strong>7 + 4 jours</strong></div>
+          </div>
+        </div>
+        <div class="callout callout-warning"><p class="callout-title">Avant d’ouvrir Moodle</p><p>Adaptez la question, le format et les critères à votre enseignement. Pour une première utilisation, gardez une production courte et un enjeu formatif ou faiblement pondéré.</p></div>
+      </div>
+    </section>
+
+    <div class="container section content-layout" id="parcours">
+      <aside class="toc" aria-label="Phases du tutoriel" data-toc>
+        <h2>Phases Moodle</h2>
+        <ul>
+          <li><a href="#phase-1">1. Mise en place</a></li>
+          <li><a href="#phase-2">2. Remise</a></li>
+          <li><a href="#phase-3">3. Évaluation</a></li>
+          <li><a href="#phase-4">4. Notation</a></li>
+          <li><a href="#phase-5">5. Fermé</a></li>
+        </ul>
+      </aside>
+
+      <article class="article">
+        <div class="phase-progress" aria-live="polite">
+          <p><strong data-progress-label>0 phase sur 5 terminée</strong> — progression enregistrée uniquement dans ce navigateur.</p>
+          <div class="progress-track" aria-hidden="true"><span data-progress-phase="1"></span><span data-progress-phase="2"></span><span data-progress-phase="3"></span><span data-progress-phase="4"></span><span data-progress-phase="5"></span></div>
+        </div>
+
+        <section class="phase-section" id="phase-1">
+          <div class="phase-heading"><span class="phase-index" aria-hidden="true">1</span><div><p class="eyebrow">Configurer</p><h2>Mise en place</h2><p class="phase-purpose"><strong>Objectif pédagogique :</strong> rendre la tâche, les critères et le calendrier cohérents et compréhensibles.</p></div></div>
+          <div class="phase-role-grid">
+            <div class="phase-role"><span>Enseignant</span><p>Prépare la consigne, crée l’activité et teste le formulaire.</p></div>
+            <div class="phase-role"><span>Étudiant</span><p>Peut lire la présentation, mais ne dépose ni n’évalue encore.</p></div>
+            <div class="phase-role"><span>Pour continuer</span><p>Consignes, dates et formulaire sont prêts ; le test est concluant.</p></div>
+          </div>
+
+          <div class="substep"><h3>1.1 Préparer les quatre éléments réutilisés dans Moodle</h3><ol><li><strong>Objectif :</strong> appliquer trois critères pour analyser et améliorer une note argumentée.</li><li><strong>Production :</strong> 500 mots, une position explicite, deux éléments probants, dépôt PDF.</li><li><strong>Retour :</strong> un élément observé et une amélioration par critère ; un point fort et une priorité.</li><li><strong>Calendrier :</strong> 7 jours de production, 4 jours d’évaluation, puis un bilan.</li></ol></div>
+
+          <div class="substep"><h3>1.2 Ajouter l’activité</h3><ol><li>Ouvrez le cours et activez le <strong>Mode d’édition</strong>.</li><li>Cliquez sur <strong>Ajouter une activité ou ressource</strong>.</li><li>Dans Moodle 5.1, ouvrez <strong>Évaluation</strong>, sélectionnez <strong>Atelier</strong>, puis <strong>Ajouter</strong>.</li><li>Nommez l’activité « Évaluation par les pairs — note d’analyse ».</li></ol>
+            <figure class="figure"><img src="assets/images/ajouter-atelier-moodle-5.png" alt="Fenêtre Moodle Ajouter une activité ou ressource, catégorie Évaluation, carte Atelier sélectionnée et bouton Ajouter en bas à droite." width="1142" height="775"><figcaption>Dans Moodle 5.1, l’Atelier se trouve dans la catégorie Évaluation. Le thème local peut modifier la disposition.</figcaption></figure>
+            <div class="template-box"><p class="callout-title">Description courte prête à adapter</p><p id="modele-description">Déposez votre note, évaluez trois travaux avec la grille, puis consultez les retours reçus après la fermeture de l’Atelier.</p><button class="copy-button" type="button" data-copy-target="#modele-description">Copier le texte</button></div>
+          </div>
+
+          <div class="substep"><h3>1.3 Régler les notes et la stratégie</h3><p>Dans <strong>Réglages d’évaluation</strong>, choisissez <strong>Évaluation cumulative</strong> <button class="info-tip" type="button" data-tooltip="Chaque critère reçoit une note et un commentaire. Moodle agrège les notes des critères." aria-label="Définition de l’évaluation cumulative">i</button>.</p><ul><li><strong>Note du travail remis :</strong> 80.</li><li><strong>Note des évaluations :</strong> 20.</li><li><strong>Décimales :</strong> 0.</li></ul><p>Moodle produit donc deux résultats : la qualité du travail reçu et la qualité de l’évaluation fournie. La seconde repose sur la comparaison entre évaluations ; elle demande une lecture prudente en cas d’écart.</p>
+            <details class="context-details"><summary>Autres stratégies possibles</summary><p><strong>Commentaires</strong> convient à un exercice sans note numérique. <strong>Grille d’évaluation</strong> propose des niveaux descriptifs par critère, mais demande plus de préparation. <strong>Nombre d’erreurs</strong> vérifie une série d’affirmations.</p></details>
+            <div class="callout callout-warning"><p class="callout-title">À décider maintenant</p><p>La stratégie ne peut plus être changée après l’entrée en phase de remise. Prévisualisez le formulaire avant d’ouvrir.</p></div>
+          </div>
+
+          <div class="substep"><h3>1.4 Configurer la remise et l’évaluation</h3><p>Dans <strong>Réglages de remise des travaux</strong>, autorisez un fichier, limitez à un PDF et à un seul fichier. Collez une consigne qui annonce aussi la lecture par les pairs.</p>
+            <div class="template-box"><p class="callout-title">Consigne de remise</p><p id="modele-remise">Déposez un PDF de 500 mots maximum. Formulez une position explicite et mobilisez au moins deux éléments du cours. N’inscrivez pas de donnée personnelle sensible. Le fichier pourra être lu par trois étudiants du groupe.</p><button class="copy-button" type="button" data-copy-target="#modele-remise">Copier le texte</button></div>
+            <p>Dans <strong>Réglages de l’évaluation</strong>, demandez une observation précise et une proposition réalisable pour chaque critère. Activez le commentaire global.</p>
+            <div class="template-box"><p class="callout-title">Consigne d’évaluation</p><p id="modele-evaluation">Lisez le travail une première fois sans noter. Relisez-le avec les trois critères. Justifiez chaque note par un élément précis. Terminez par un point fort et une amélioration prioritaire. Évaluez le travail, jamais la personne.</p><button class="copy-button" type="button" data-copy-target="#modele-evaluation">Copier le texte</button></div>
+            <details class="context-details"><summary>Anonymat et auto-évaluation</summary><p>L’anonymat dépend des permissions « voir le nom de l’auteur » et « voir le nom de l’évaluateur ». Demandez au support local de les vérifier ; un nom écrit dans le fichier reste visible. Pour ce premier scénario, laissez l’auto-évaluation désactivée.</p></details>
+          </div>
+
+          <div class="substep"><h3>1.5 Fixer les dates sans automatiser la bascule</h3><p>Dans <strong>Disponibilité</strong>, activez l’ouverture et la date limite des remises, puis celles des évaluations. Pour un premier essai, changez les phases manuellement après vérification. La bascule automatique dépend d’une tâche technique planifiée et n’ouvre ni la première phase ni la fermeture finale.</p></div>
+
+          <div class="substep"><h3>1.6 Construire et tester le formulaire</h3><p>Dans le planificateur, cliquez sur <strong>Préparer le formulaire d’évaluation</strong>.</p><div class="rubric-scroll" tabindex="0" aria-label="Exemple de grille, défilement horizontal possible"><table class="rubric-demo"><thead><tr><th>Critère</th><th>Question au pair</th><th>Maximum</th><th>Commentaire attendu</th></tr></thead><tbody><tr><td>Position</td><td>Répond-elle clairement à la question ?</td><td>10</td><td>Citez la phrase centrale et proposez une précision.</td></tr><tr><td>Argumentation</td><td>Les raisons sont-elles étayées ?</td><td>10</td><td>Repérez un appui efficace et une liaison à renforcer.</td></tr><tr><td>Clarté</td><td>Le cheminement est-il facile à suivre ?</td><td>10</td><td>Indiquez une force et une transition à améliorer.</td></tr></tbody></table></div><ol><li>Créez trois critères de même poids.</li><li>Activez un commentaire pour chacun.</li><li>Enregistrez et prévisualisez.</li><li>Vérifiez que les notes sont sélectionnables et les formulations sans ambiguïté.</li></ol>
+            <details class="context-details"><summary>Ajouter un entraînement de calibration</summary><p>Fournissez un travail exemple et votre évaluation de référence. Les étudiants l’évaluent avant les travaux réels. Cet entraînement aide à discuter les critères et n’entre pas dans la note d’évaluation.</p></details>
+          </div>
+          <div class="phase-footer"><button class="phase-complete" type="button" data-phase-complete="1" aria-pressed="false">Marquer comme terminée</button><a href="#phase-2">Continuer vers la remise →</a></div>
+        </section>
+
+        <section class="phase-section" id="phase-2">
+          <div class="phase-heading"><span class="phase-index" aria-hidden="true">2</span><div><p class="eyebrow">Piloter</p><h2>Remise des travaux</h2><p class="phase-purpose"><strong>Objectif pédagogique :</strong> obtenir des productions exploitables tout en préparant une attribution équitable.</p></div></div>
+          <div class="phase-role-grid"><div class="phase-role"><span>Enseignant</span><p>Ouvre les dépôts, suit les absents et attribue les travaux.</p></div><div class="phase-role"><span>Étudiant</span><p>Lit la consigne, dépose son PDF et vérifie son dépôt.</p></div><div class="phase-role"><span>Pour continuer</span><p>Les remises sont stabilisées et chaque évaluateur a trois travaux.</p></div></div>
+          <div class="substep"><h3>2.1 Ouvrir et suivre les remises</h3><p>Dans le planificateur, cliquez sur <strong>Passer à la phase de remise des travaux</strong>, puis confirmez.</p><figure class="figure"><img src="assets/images/planificateur-atelier-moodle-5.png" alt="Planificateur d’un Atelier Moodle avec ses cinq phases et la phase de mise en place surlignée." width="1915" height="962"><figcaption>La colonne colorée indique la phase active. Les coches montrent les tâches prêtes ; vérifiez les éléments incomplets avant chaque bascule.</figcaption></figure>
+            <div class="template-box"><p class="callout-title">Annonce d’ouverture</p><p id="modele-ouverture">La phase de remise est ouverte jusqu’au [date, heure]. Ouvrez l’Atelier puis cliquez sur Ajouter un travail. Vérifiez que votre fichier apparaît bien avant de quitter la page.</p><button class="copy-button" type="button" data-copy-target="#modele-ouverture">Copier le texte</button></div>
+            <ul class="checklist"><li>repérez les non-remettants dans le rapport ;</li><li>contrôlez les formats et les données sensibles visibles ;</li><li>envoyez un rappel 24 à 48 heures avant l’échéance ;</li><li>attendez que la liste soit stable avant l’attribution définitive.</li></ul>
+          </div>
+          <div class="substep"><h3>2.2 Attribuer trois travaux par étudiant</h3><ol><li>Après l’échéance, ouvrez <strong>Attribution des travaux remis</strong>.</li><li>Choisissez <strong>Attribution aléatoire</strong>.</li><li>Réglez <strong>3 évaluations par évaluateur</strong> ou l’équivalent proposé.</li><li>Lancez l’attribution, puis contrôlez le tableau : aucun travail sans évaluateur et aucune charge excessive.</li></ol><p>Trois avis donnent une base plus informative que deux lorsque les notes divergent. Cela n’élimine pas le besoin de modération.</p>
+            <details class="context-details"><summary>Retards et étudiants sans remise</summary><p>Une remise ajoutée après l’attribution n’est pas forcément allouée. Attribuez-la manuellement ou relancez avec prudence. Pour ce scénario, un étudiant sans remise peut encore évaluer afin de préserver l’apprentissage du feedback.</p></details>
+          </div>
+          <div class="phase-footer"><a href="#phase-1">← Revenir à la mise en place</a><button class="phase-complete" type="button" data-phase-complete="2" aria-pressed="false">Marquer comme terminée</button><a href="#phase-3">Continuer vers l’évaluation →</a></div>
+        </section>
+
+        <section class="phase-section" id="phase-3">
+          <div class="phase-heading"><span class="phase-index" aria-hidden="true">3</span><div><p class="eyebrow">Piloter</p><h2>Évaluation par les pairs</h2><p class="phase-purpose"><strong>Objectif pédagogique :</strong> faire comparer, justifier et formuler un retour orienté vers l’amélioration.</p></div></div>
+          <div class="phase-role-grid"><div class="phase-role"><span>Enseignant</span><p>Ouvre la phase, suit l’avancement et intervient sur les retours problématiques.</p></div><div class="phase-role"><span>Étudiant</span><p>Évalue trois productions avec le même formulaire.</p></div><div class="phase-role"><span>Pour continuer</span><p>Les évaluations attendues sont terminées ou les exceptions sont identifiées.</p></div></div>
+          <div class="substep"><h3>3.1 Ouvrir et annoncer la phase</h3><p>Revenez à l’onglet <strong>Atelier</strong>, cliquez sur <strong>Passer à la phase d’évaluation</strong>, puis confirmez.</p><div class="template-box"><p class="callout-title">Annonce aux étudiants</p><p id="modele-pairs">Trois travaux vous sont attribués. Pour chacun, ouvrez le fichier puis cliquez sur Évaluer. Renseignez toutes les notes et tous les commentaires avant le [date, heure]. Les auteurs verront vos retours après la fermeture de l’Atelier.</p><button class="copy-button" type="button" data-copy-target="#modele-pairs">Copier le texte</button></div></div>
+          <div class="substep"><h3>3.2 Suivre sans reprendre tout le travail</h3><div class="phase-role-grid"><div class="phase-role"><span>Étudiant</span><p>Ouvre un travail, clique sur Évaluer, complète le formulaire, enregistre et recommence.</p></div><div class="phase-role"><span>Enseignant</span><p>Suit les évaluations attendues et terminées, les accès aux fichiers et les commentaires incomplets.</p></div><div class="phase-role"><span>Intervention</span><p>Relance de façon ciblée ; modère un retour agressif, personnel ou vide selon la procédure locale.</p></div></div><p>Repérez aussi les notes très dispersées : elles seront examinées dans la phase suivante. Ne concluez pas encore qu’un évaluateur a tort.</p></div>
+          <div class="phase-footer"><a href="#phase-2">← Revenir à la remise</a><button class="phase-complete" type="button" data-phase-complete="3" aria-pressed="false">Marquer comme terminée</button><a href="#phase-4">Continuer vers la notation →</a></div>
+        </section>
+
+        <section class="phase-section" id="phase-4">
+          <div class="phase-heading"><span class="phase-index" aria-hidden="true">4</span><div><p class="eyebrow">Piloter</p><h2>Notation des évaluations</h2><p class="phase-purpose"><strong>Objectif pédagogique :</strong> contrôler la cohérence des résultats, modérer les cas atypiques et préparer une synthèse.</p></div></div>
+          <div class="phase-role-grid"><div class="phase-role"><span>Enseignant</span><p>Calcule, lit les écarts, modère et rédige la conclusion.</p></div><div class="phase-role"><span>Étudiant</span><p>N’évalue plus ; les résultats définitifs ne sont pas encore libérés.</p></div><div class="phase-role"><span>Pour continuer</span><p>Les notes sont calculées, les écarts lus et les incidents traités.</p></div></div>
+          <div class="substep"><h3>4.1 Calculer puis contrôler</h3><ol><li>Passez à la <strong>phase de notation des évaluations</strong>.</li><li>Choisissez un niveau intermédiaire pour la <strong>comparaison des évaluations</strong>.</li><li>Cliquez sur <strong>Recalculer les notes</strong> ou l’action équivalente.</li><li>Repérez les travaux aux avis très dispersés et les notes d’évaluation inhabituellement basses.</li><li>Lisez les commentaires avant toute correction. Si nécessaire, ajoutez votre propre évaluation avec un poids supérieur ou ajustez une note en gardant une justification.</li><li>Rédigez la <strong>conclusion de l’activité</strong> : tendances, conseils et prochaine action.</li></ol>
+            <details class="context-details" open><summary>Bien interpréter la note d’évaluation</summary><p>Elle exprime surtout la proximité des réponses avec la meilleure approximation du consensus. Un avis minoritaire peut être argumenté et utile. La valeur numérique sert de signal ; le contenu du retour reste à lire.</p></details>
+            <details class="context-details"><summary>Publier quelques travaux</summary><p>Vous pouvez marquer des travaux comme publiés pour les montrer après fermeture. Annoncez cet usage en amont et demandez l’accord de l’auteur si la diffusion dépasse le cadre prévu.</p></details>
+          </div>
+          <div class="phase-footer"><a href="#phase-3">← Revenir à l’évaluation</a><button class="phase-complete" type="button" data-phase-complete="4" aria-pressed="false">Marquer comme terminée</button><a href="#phase-5">Continuer vers la fermeture →</a></div>
+        </section>
+
+        <section class="phase-section" id="phase-5">
+          <div class="phase-heading"><span class="phase-index" aria-hidden="true">5</span><div><p class="eyebrow">Exploiter</p><h2>Fermé</h2><p class="phase-purpose"><strong>Objectif pédagogique :</strong> rendre les retours lisibles et les transformer en décisions pour un prochain travail.</p></div></div>
+          <div class="phase-role-grid"><div class="phase-role"><span>Enseignant</span><p>Ferme l’activité, communique le résultat et anime le bilan.</p></div><div class="phase-role"><span>Étudiant</span><p>Consulte les retours reçus et formule un plan d’amélioration.</p></div><div class="phase-role"><span>Résultat attendu</span><p>Chaque étudiant choisit au moins une modification transférable.</p></div></div>
+          <div class="substep"><h3>5.1 Fermer et libérer les résultats</h3><ol><li>Vérifiez les calculs et les cas litigieux.</li><li>Cliquez sur <strong>Terminer l’Atelier</strong> ou passez à <strong>Fermé</strong>.</li><li>Les deux composantes sont transmises au carnet de notes et les étudiants peuvent consulter les évaluations reçues.</li><li>Envoyez une consigne précise pour retrouver et utiliser ces retours.</li></ol>
+            <div class="template-box"><p class="callout-title">Consigne de clôture</p><p id="modele-cloture">Ouvrez l’Atelier, retrouvez Votre travail remis et cliquez sur son titre. Relevez un accord entre pairs, un désaccord à examiner et deux modifications que vous retiendrez. Déposez ce plan dans [espace prévu].</p><button class="copy-button" type="button" data-copy-target="#modele-cloture">Copier le texte</button></div>
+          </div>
+          <div class="substep"><h3>5.2 Exploiter les retours en 15 minutes</h3><ol><li>Rappelez que les retours sont des informations à examiner.</li><li>Présentez deux forces et deux difficultés récurrentes sans identifier les auteurs.</li><li>Discutez un écart d’interprétation d’un critère.</li><li>Faites écrire une action de transfert vers le prochain travail.</li></ol></div>
+          <div class="phase-footer"><a href="#phase-4">← Revenir à la notation</a><button class="phase-complete" type="button" data-phase-complete="5" aria-pressed="false">Marquer comme terminée</button><a href="bonnes-pratiques.html#checklist">Vérifier avec la checklist →</a></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><h2>Atelier Moodle 5 — Guide pratique</h2><p>Les libellés peuvent différer selon la traduction, le thème et les permissions de votre plateforme.</p></div><div><h3>Compléments</h3><ul><li><a href="pedagogie.html">Choisir et concevoir</a></li><li><a href="bonnes-pratiques.html">Sécuriser</a></li><li><a href="glossaire.html">Glossaire</a></li></ul></div><div><h3>Références</h3><a href="ressources.html">Documentation et recherches</a><p class="small">Consultation : 19 août 2026.</p></div></div></footer>
+</body>
+</html>
