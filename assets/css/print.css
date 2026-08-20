@@ -1,0 +1,53 @@
+@media print {
+  .site-header,
+  .site-footer,
+  .toc,
+  .hero-actions,
+  .nav-toggle,
+  .info-tip,
+  .phase-progress,
+  .phase-complete,
+  .copy-button,
+  .figure-zoom {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    font-size: 10.5pt;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .content-layout,
+  .hero-grid,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    display: block;
+  }
+
+  .card,
+  .callout,
+  .figure,
+  .step {
+    break-inside: avoid;
+  }
+
+  a {
+    color: #000;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    overflow-wrap: anywhere;
+  }
+
+  details:not([open]) > *:not(summary) {
+    display: block !important;
+  }
+}
