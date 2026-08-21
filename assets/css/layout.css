@@ -95,6 +95,14 @@
   padding: 0;
 }
 
+.nav-menu {
+  margin-left: auto;
+}
+
+.nav-menu > summary {
+  display: none;
+}
+
 .nav-links a {
   border-radius: var(--radius-sm);
   color: #26364a;
@@ -234,10 +242,24 @@ main {
   grid-template-columns: minmax(13rem, 0.34fr) minmax(0, 1fr);
 }
 
+.content-layout > *,
+.article,
+main {
+  min-width: 0;
+}
+
 .toc {
   border-left: 0.25rem solid var(--teal-600);
   position: sticky;
   top: 7.6rem;
+}
+
+.toc-details > summary {
+  display: none;
+}
+
+.toc-details:not([open]) > .toc-panel {
+  display: block;
 }
 
 .toc h2 {
@@ -325,8 +347,18 @@ main {
 }
 
 @media (max-width: 64rem) {
-  .nav-toggle {
+  .nav-menu {
+    margin-left: 0;
+    position: static;
+  }
+
+  .nav-menu > summary {
     display: inline-flex;
+    list-style: none;
+  }
+
+  .nav-menu > summary::-webkit-details-marker {
+    display: none;
   }
 
   .nav-links {
@@ -343,7 +375,7 @@ main {
     top: 100%;
   }
 
-  .nav-links.is-open {
+  .nav-menu[open] .nav-links {
     display: flex;
   }
 
@@ -359,7 +391,8 @@ main {
 
 @media (max-width: 48rem) {
   .site-header {
-    position: static;
+    position: relative;
+    top: auto;
   }
 
   .top-strip .container {
@@ -402,24 +435,49 @@ main {
     border: 1px solid var(--line);
     border-left: 0.25rem solid var(--teal-600);
     border-radius: var(--radius-sm);
-    padding-block: 0.75rem;
-    position: sticky;
-    top: 0;
-    z-index: 20;
+    padding: 0;
+    position: static;
   }
 
-  .toc ul {
+  .toc-details > summary {
+    align-items: center;
+    color: var(--blue-900);
+    cursor: pointer;
     display: flex;
-    overflow-x: auto;
-    padding: 0 0.5rem 0.2rem;
+    font-weight: 800;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0.85rem 1rem;
   }
 
-  .toc li {
-    flex: 0 0 auto;
+  .toc-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .toc-details > summary::after {
+    content: "+";
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .toc-details[open] > summary::after {
+    content: "−";
+  }
+
+  .toc-details:not([open]) > .toc-panel {
+    display: none;
+  }
+
+  .toc-panel {
+    border-top: 1px solid var(--line);
+    padding-block: 0.7rem 0.85rem;
+  }
+
+  .toc h2 {
+    display: none;
   }
 
   .toc a {
-    border-radius: var(--radius-sm);
-    white-space: nowrap;
+    padding-block: 0.52rem;
   }
 }
