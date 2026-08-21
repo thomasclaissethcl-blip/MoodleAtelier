@@ -248,4 +248,49 @@
   document.querySelectorAll("[data-print]").forEach(function (button) {
     button.addEventListener("click", function () { window.print(); });
   });
+
+  var welcomeDialog = document.querySelector("[data-welcome-dialog]");
+
+  function sessionGet(key) {
+    try { return sessionStorage.getItem(key); } catch (error) { return null; }
+  }
+
+  function sessionSet(key, value) {
+    try { sessionStorage.setItem(key, value); } catch (error) { return; }
+  }
+
+  if (welcomeDialog && sessionGet("atelier-moodle-welcome-seen") !== "yes") {
+    var dismissWelcome = function () {
+      sessionSet("atelier-moodle-welcome-seen", "yes");
+      if (typeof welcomeDialog.close === "function" && welcomeDialog.open) {
+        welcomeDialog.close();
+      } else {
+        welcomeDialog.removeAttribute("open");
+      }
+    };
+
+    welcomeDialog.querySelectorAll("[data-welcome-close]").forEach(function (button) {
+      button.addEventListener("click", dismissWelcome);
+    });
+
+    welcomeDialog.querySelectorAll("[data-welcome-action]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        sessionSet("atelier-moodle-welcome-seen", "yes");
+      });
+    });
+
+    welcomeDialog.addEventListener("close", function () {
+      sessionSet("atelier-moodle-welcome-seen", "yes");
+    });
+
+    welcomeDialog.addEventListener("click", function (event) {
+      if (event.target === welcomeDialog) dismissWelcome();
+    });
+
+    if (typeof welcomeDialog.showModal === "function") {
+      welcomeDialog.showModal();
+    } else {
+      welcomeDialog.setAttribute("open", "");
+    }
+  }
 })();
