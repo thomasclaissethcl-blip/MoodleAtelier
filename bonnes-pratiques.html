@@ -14,7 +14,8 @@
     <div class="top-strip"><div class="container"><p class="context-label">Enseignement supérieur · prise en main débutante</p><nav class="utility-links" aria-label="Liens utiles"><a href="glossaire.html">Glossaire</a><a href="ressources.html">Sources</a><span>Moodle 5.x</span></nav></div></div>
     <nav class="site-nav container" aria-label="Navigation principale">
       <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>Atelier Moodle 5<br><span class="brand-subtitle muted small">Guide pratique</span></span></a>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-controls="navigation" aria-expanded="false">Menu</button>
+      <details class="nav-menu" data-nav-menu>
+      <summary class="nav-toggle">Menu</summary>
       <ul class="nav-links" id="navigation" data-nav-links>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="pedagogie.html">Choisir &amp; concevoir</a></li>
@@ -22,6 +23,7 @@
         <li><a href="tutoriel.html#phase-2">Piloter</a></li>
         <li><a href="bonnes-pratiques.html" aria-current="page">Sécuriser</a></li>
       </ul>
+      </details>
     </nav>
   </header>
 
@@ -31,12 +33,16 @@
         <p class="eyebrow">Partie 3</p>
         <h1>Bonnes pratiques</h1>
         <p class="lead">Des choix simples pour obtenir des retours plus utiles, limiter les incidents et garder la charge de travail sous contrôle.</p>
+        <p class="definition-hint">Les termes soulignés en pointillés ouvrent une définition.</p>
         <div class="hero-actions"><a class="btn btn-primary" href="#checklist">Aller à la checklist</a><button class="btn btn-secondary" type="button" data-print>Imprimer</button></div>
       </div>
     </header>
 
     <div class="container section content-layout">
-      <aside class="toc" aria-label="Sommaire de la page" data-toc>
+      <aside class="toc" aria-label="Sommaire de la page">
+        <details class="toc-details" data-toc>
+        <summary>Sommaire de la page</summary>
+        <div class="toc-panel">
         <h2>Dans cette page</h2>
         <ul>
           <li><a href="#design">Concevoir sobrement</a></li>
@@ -46,6 +52,8 @@
           <li><a href="#notation">Interpréter les notes</a></li>
           <li><a href="#checklist">Checklist finale</a></li>
         </ul>
+        </div>
+        </details>
       </aside>
 
       <article class="article">
@@ -80,7 +88,7 @@
         <section id="feedback">
           <p class="eyebrow">2. Qualité des retours</p>
           <h2>Enseigner la manière de commenter</h2>
-          <p>Un formulaire structuré aide, mais ne remplace pas l’entraînement. Faites analyser un exemple commun et comparez les justifications avant l’évaluation réelle.</p>
+          <p>Un formulaire structuré aide, mais ne remplace pas l’entraînement. Faites analyser un exemple commun et comparez les justifications avant l’évaluation réelle. Cette préparation améliore la qualité du <button class="definition-term" type="button" data-definition="Information donnée sur un travail afin d’éclairer sa qualité et les écarts par rapport aux attendus.">feedback</button>.</p>
           <div class="grid-3">
             <div class="card"><span class="number-badge">1</span><h3>Fait observé</h3><p>« La position apparaît dans la dernière phrase de l’introduction. »</p></div>
             <div class="card"><span class="number-badge">2</span><h3>Effet et critère</h3><p>« Le lecteur doit attendre pour comprendre l’orientation de la note. »</p></div>
@@ -102,7 +110,7 @@
           <h2>Prévoir les situations sensibles</h2>
           <div class="grid-2">
             <div class="card">
-              <h3>Anonymat</h3>
+              <h3><button class="definition-term" type="button" data-definition="Masquage du nom de l’auteur, de l’évaluateur, ou des deux. Dans l’Atelier, il dépend de permissions spécifiques et peut être compromis par le contenu du fichier.">Anonymat</button></h3>
               <ul>
                 <li>Décidez s’il sert réellement le climat de travail.</li>
                 <li>Faites vérifier les permissions de l’Atelier.</li>
@@ -157,9 +165,9 @@
           <p class="eyebrow">5. Notes</p>
           <h2>Lire les calculs avec prudence</h2>
           <h3>Note du travail remis</h3>
-          <p>Elle agrège les notes données au travail, selon les pondérations. Examinez les grands écarts. Une évaluation enseignante peut recevoir un poids supérieur ou la note finale peut être corrigée manuellement.</p>
+          <p>La <button class="definition-term" type="button" data-definition="Résultat agrégé des évaluations reçues par la production, ajustable par l’enseignant.">note du travail remis</button> agrège les notes données au travail, selon les pondérations. Examinez les grands écarts. Une évaluation enseignante peut recevoir un poids supérieur ou la note finale peut être corrigée manuellement.</p>
           <h3>Note des évaluations</h3>
-          <p>Elle estime la proximité des réponses de l’évaluateur avec une évaluation considérée comme la meilleure approximation du consensus. Elle ne mesure pas directement l’utilité, la politesse ou la profondeur du texte rédigé.</p>
+          <p>La <button class="definition-term" type="button" data-definition="Note attribuée à la qualité de l’activité d’évaluation. Dans Moodle, elle repose surtout sur la proximité avec une évaluation de référence estimée.">note des évaluations</button> estime la proximité des réponses de l’évaluateur avec une évaluation considérée comme la meilleure approximation du consensus. Elle ne mesure pas directement l’utilité, la politesse ou la profondeur du texte rédigé.</p>
           <div class="good-bad">
             <div class="good"><h3>Bonne utilisation</h3><p>Utiliser la note comme indicateur de cohérence, puis lire les cas atypiques et tenir compte des justifications.</p></div>
             <div class="bad"><h3>À éviter</h3><p>Sanctionner automatiquement un avis minoritaire, surtout avec peu d’évaluations ou des critères ambigus.</p></div>

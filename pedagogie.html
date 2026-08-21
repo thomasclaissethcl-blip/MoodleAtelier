@@ -14,7 +14,8 @@
     <div class="top-strip"><div class="container"><p class="context-label">Enseignement supérieur · prise en main débutante</p><nav class="utility-links" aria-label="Liens utiles"><a href="glossaire.html">Glossaire</a><a href="ressources.html">Sources</a><span>Moodle 5.x</span></nav></div></div>
     <nav class="site-nav container" aria-label="Navigation principale">
       <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>Atelier Moodle 5<br><span class="brand-subtitle muted small">Guide pratique</span></span></a>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-controls="navigation" aria-expanded="false">Menu</button>
+      <details class="nav-menu" data-nav-menu>
+      <summary class="nav-toggle">Menu</summary>
       <ul class="nav-links" id="navigation" data-nav-links>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="pedagogie.html" aria-current="page">Choisir &amp; concevoir</a></li>
@@ -22,6 +23,7 @@
         <li><a href="tutoriel.html#phase-2">Piloter</a></li>
         <li><a href="bonnes-pratiques.html">Sécuriser</a></li>
       </ul>
+      </details>
     </nav>
   </header>
 
@@ -31,11 +33,15 @@
         <p class="eyebrow">Partie 1</p>
         <h1>Concevoir l’évaluation par les pairs</h1>
         <p class="lead">L’Atelier organise des dépôts, des attributions, des évaluations et des notes. L’apprentissage vient du travail de comparaison, de justification et de révision préparé autour de ces fonctions.</p>
+        <p class="definition-hint">Les termes soulignés en pointillés ouvrent une définition.</p>
       </div>
     </header>
 
     <div class="container section content-layout">
-      <aside class="toc" aria-label="Sommaire de la page" data-toc>
+      <aside class="toc" aria-label="Sommaire de la page">
+        <details class="toc-details" data-toc>
+        <summary>Sommaire de la page</summary>
+        <div class="toc-panel">
         <h2>Dans cette page</h2>
         <ul>
           <li><a href="#definition">Principe</a></li>
@@ -45,13 +51,15 @@
           <li><a href="#methode">Préparer, animer, exploiter</a></li>
           <li><a href="#moodle">Ce que Moodle apporte</a></li>
         </ul>
+        </div>
+        </details>
       </aside>
 
       <article class="article">
         <section id="definition">
           <p class="eyebrow">Le principe</p>
           <h2>Apprendre à juger la qualité d’un travail</h2>
-          <p>Dans une évaluation par les pairs, l’étudiant examine le travail d’un ou plusieurs collègues à partir de critères explicites. Il produit un jugement argumenté et reçoit en retour plusieurs lectures de son propre travail.</p>
+          <p>Dans une <button class="definition-term" type="button" data-definition="Situation où des étudiants examinent et commentent le travail d’autres étudiants à partir de critères explicites.">évaluation par les pairs</button>, l’étudiant examine le travail d’un ou plusieurs collègues à partir de <button class="definition-term" type="button" data-definition="Aspect observable du travail utilisé pour porter un jugement. Un bon critère est compréhensible, lié à l’objectif et illustrable.">critères</button> explicites. Il produit un jugement argumenté et reçoit en retour plusieurs lectures de son propre travail.</p>
           <p>La valeur pédagogique se trouve dans trois opérations :</p>
           <div class="grid-3">
             <div class="card"><span class="number-badge">1</span><h3>Comparer</h3><p>Repérer des choix différents et relier des productions concrètes aux critères.</p></div>
@@ -59,7 +67,7 @@
             <div class="card"><span class="number-badge">3</span><h3>Réinvestir</h3><p>Utiliser ce qui a été observé chez autrui et reçu sur son travail pour décider d’une amélioration.</p></div>
           </div>
           <div class="callout">
-            <p class="callout-title">Évaluation formative ou sommative ? <button class="info-tip" type="button" data-tooltip="Formative : l’information sert d’abord à progresser. Sommative : le résultat contribue à certifier un niveau ou à attribuer une note." aria-label="Définition de formative et sommative">i</button></p>
+            <p class="callout-title"><button class="definition-term" type="button" data-definition="Évaluation dont la fonction principale est d’aider à progresser. Elle est suivie d’une décision, d’une révision ou d’un transfert.">Évaluation formative</button> ou <button class="definition-term" type="button" data-definition="Évaluation utilisée pour établir un résultat final, certifier un niveau ou contribuer fortement à une note.">sommative</button>&nbsp;?</p>
             <p>Pour une première expérience, utilisez l’Atelier comme activité formative, ou avec une pondération faible. Si la note des pairs compte fortement, ajoutez une modération enseignante, un protocole de recours et des règles d’équité explicites.</p>
           </div>
           <p class="small muted">Appui : la méta-analyse de Double, McGrane et Hopfenbeck rapporte un effet global favorable, de taille faible à moyenne, sur la performance académique. Le résultat agrège des contextes variés et ne garantit pas le même effet dans chaque cours. <a href="https://link.springer.com/article/10.1007/s10648-019-09510-3">Lire l’article</a>.</p>
@@ -74,7 +82,7 @@
               <ul class="checklist">
                 <li>Analyser une production complexe à partir de critères.</li>
                 <li>Argumenter un jugement et citer des éléments observables.</li>
-                <li>Développer le jugement évaluatif <button class="info-tip" type="button" data-tooltip="Capacité à reconnaître la qualité d’un travail et à décider comment l’améliorer, dans un contexte donné." aria-label="Définition du jugement évaluatif">i</button>.</li>
+                <li>Développer le <button class="definition-term" type="button" data-definition="Capacité à reconnaître la qualité d’un travail et à décider comment l’améliorer dans un contexte donné.">jugement évaluatif</button>.</li>
                 <li>Donner et recevoir un retour professionnel.</li>
                 <li>Prendre du recul sur sa propre production.</li>
                 <li>Découvrir plusieurs démarches possibles face à une même tâche.</li>
@@ -133,7 +141,7 @@
         <section id="workflow">
           <p class="eyebrow">Le lien fonctionnel–pédagogique</p>
           <h2>Les cinq phases vues par les deux rôles</h2>
-          <p>Le planificateur de Moodle montre une phase active. Cette phase détermine les actions disponibles. L’enseignant garde la responsabilité des bascules et de leur sens.</p>
+          <p>Le <button class="definition-term" type="button" data-definition="Tableau qui affiche les cinq phases, surligne la phase active et liste les tâches attendues.">planificateur de l’Atelier</button> montre une <button class="definition-term" type="button" data-definition="État fonctionnel de l’Atelier : mise en place, remise, évaluation, notation des évaluations ou fermé.">phase</button> active. Cette phase détermine les actions disponibles. L’enseignant garde la responsabilité des <button class="definition-term" type="button" data-definition="Passage d’un état de l’Atelier au suivant. Cette action ouvre ou ferme des possibilités pour les étudiants.">bascules</button> et de leur sens.</p>
           <div class="role-map" role="table" aria-label="Correspondance entre phases Moodle, actions des rôles et intentions pédagogiques">
             <div class="role-map-header" role="row"><div role="columnheader">Phase Moodle</div><div role="columnheader">Enseignant</div><div role="columnheader">Étudiant</div><div role="columnheader">Intention</div></div>
             <div class="role-map-row" role="row"><div class="phase-name" role="cell">1. Mise en place</div><div role="cell">Cadre la tâche, la grille, les exemples et le calendrier.</div><div role="cell">Lit le cadre ; aucune remise ou évaluation n’est encore modifiable.</div><div role="cell">Rendre les attendus interprétables et créer un climat de confiance.</div></div>
@@ -207,10 +215,10 @@
               <ul class="checklist">
                 <li>le séquençage en cinq phases et l’affichage des tâches ;</li>
                 <li>les dates de remise et d’évaluation ;</li>
-                <li>l’attribution manuelle, aléatoire ou programmée ;</li>
+                <li>l’<button class="definition-term" type="button" data-definition="Association entre un travail remis et un ou plusieurs évaluateurs. Elle peut être manuelle, aléatoire ou programmée.">attribution</button> manuelle, aléatoire ou programmée ;</li>
                 <li>les exemples d’entraînement et l’autoévaluation ;</li>
                 <li>quatre stratégies de grille ;</li>
-                <li>une note de production et une note de qualité des évaluations ;</li>
+                <li>une <button class="definition-term" type="button" data-definition="Résultat agrégé des évaluations reçues par la production, ajustable par l’enseignant.">note du travail remis</button> et une <button class="definition-term" type="button" data-definition="Note attribuée à la qualité de l’activité d’évaluation. Dans Moodle, elle repose surtout sur la proximité avec une évaluation de référence estimée.">note des évaluations</button> ;</li>
                 <li>le calcul, la pondération, la correction manuelle et la publication d’exemples ;</li>
                 <li>l’envoi des notes au carnet lorsque l’activité est fermée.</li>
               </ul>

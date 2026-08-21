@@ -16,8 +16,14 @@ Structure
 - glossaire.html : termes Moodle et pédagogiques
 - ressources.html : documentation, retours d'usage et recherches
 - assets/css : styles modulaires et impression
-- assets/js : navigation, repérage actif, progression locale, copies de modèles,
-  agrandissement des captures, infobulles et recherche dans le glossaire
+- assets/js : repérage actif, progression locale, copies de modèles,
+  agrandissement des captures, définitions contextuelles et recherche dans le glossaire
+
+Responsive et interactions
+--------------------------
+- Le menu principal et les sommaires mobiles reposent sur des contrôles HTML natifs.
+- Les termes soulignés en pointillés ouvrent une définition contextuelle au clic,
+  au toucher ou au clavier.
 - assets/images : captures de référence fournies
 
 Périmètre
