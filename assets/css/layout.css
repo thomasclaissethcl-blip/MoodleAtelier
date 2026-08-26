@@ -27,6 +27,7 @@
   align-items: center;
   display: flex;
   gap: 1rem;
+  margin-left: auto;
 }
 
 .utility-links a {
